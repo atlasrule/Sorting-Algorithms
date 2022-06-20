@@ -1,7 +1,7 @@
-#Sorting Algorithms
+# Sorting Algorithms
 Collection of sorting algorithms I've implemented.
 
-#Includes
+## Includes
 - Bubble Sort
 - Selection Sort
 - Insertion Sort
@@ -10,9 +10,9 @@ Collection of sorting algorithms I've implemented.
 - Bogo Sort
 
  
-#Plus
+## Plus
 - Shuffle
 - Binary Search
 
-#Usage
+## Usage
 Comment out the function you want inside main.

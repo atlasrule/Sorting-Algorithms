@@ -303,6 +303,48 @@ void mergeSort(int A[], int left, int right) {
 }
 
 
+// //// Tim-Sort
+// void timSort(int A[], int size) {
+// }
+
+/*
+//// Heap-Sort
+void heapSort(int A[], int size) {
+}
+*/
+
+/*
+//// Quick-Sort
+void quickSort(int A[], int size) {
+}
+*/
+
+/*
+//// Multithreaded Quick-Sort
+void quickSortMultithread(int A[], int size) {
+}
+*/
+
+/*
+//// Counting-Sort
+void countingSort(int A[], int size) {
+}
+*/
+
+/*
+//// Radix-Sort
+void radixSort(int A[], int size) {
+}
+*/
+
+/*
+//// Bucket-Sort
+void bucketSort(int A[], int size) {
+}
+*/
+
+
+
 /*
 =================
 Bogo-Sort
