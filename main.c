@@ -306,7 +306,11 @@ void mergeSort(int A[], int left, int right) {
 /*
 =================
 Bogo-Sort
-Bogo Sorts given array.
+Bogo Sorts given array. See: Infinite monkey theorem
+Best case: O(n)
+Average case: O((n-1)*n!)
+Worst case: Infinite
+Stability: Not stable
 =================
 */
 void shuffle(int A[], int size) {
