@@ -120,34 +120,26 @@ Time Complexity:  O(lg(n)+k) =  O(lg(n))
 =================
 */
 int binary(int A[], int query, int left, int right) {
-  int mid = (right + left) / 2;
-  int midNum = A[mid];
-  int index = -1;
-
-  if (right < left) {
-    return -1;
-  }
-  
-  if (midNum == query) {
-    
-    int i = mid;
-
-    if (i>1) {
-      while (A[i-1] == query) {
-        i--;
-      }
+    if (right < left) {
+        return -1;
     }
-    
-    return i;
-  }
-  
-  else if (midNum > query) {
-    index = binary(A, query, left, mid-1);
-  }
-  
-  else if (midNum < query) {
-    index = binary(A, query, mid+1, right);
-  }
+
+    int mid = left + (right - left) / 2;
+    if (A[mid] == query) {
+        while (mid > 0 && A[mid - 1] == query) {
+            mid--;
+        }
+        return mid;
+    }
+      
+    else if (A[mid] > query) {
+        return binary(A, query, left, mid - 1);
+    }
+      
+    else {
+        return binary(A, query, mid + 1, right);
+    }
+}
 
   return index;
 }
