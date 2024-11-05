@@ -158,51 +158,23 @@ Stability: Stable
 =================
 */
 int newIndex(int A[], int query, int left, int right) {
-  int mid = (right + left) / 2;
-  int midNum = A[mid];
-  int index = -1;
-
-  if (left == right) {
-    
-    if (query < A[left]) {
-      return left;
+    if (left >= right) {
+        return (query < A[left]) ? left : left + 1;
     }
-      
+
+    int mid = left + (right - left) / 2;
+    
+    if (A[mid] == query) {
+        return mid;
+    }
+    
+    else if (A[mid] > query) {
+        return newIndex(A, query, left, mid - 1);
+    }
+    
     else {
-      return left+1;
+        return newIndex(A, query, mid + 1, right);
     }
-    
-  }
-
-  if (left > right) {
-    return left;
-  }
-
-  if (query >= A[mid-1] && query <= midNum) {
-    
-    int i=mid;
-    int index = mid;
-
-    if (i>1) {
-      while (A[i-1] == query) {
-        i--;
-      }
-    }
-    
-    
-    return index;
-  }
-
-  if (midNum > query) {
-    index = newIndex(A, query, left, mid-1);
-  }
-  
-  else if (midNum < query) {
-    index = newIndex(A, query, mid+1, right);
-    
-  }
-
-  return index;
 }
 
 void binaryInsertionSort(int A[], int size) {
