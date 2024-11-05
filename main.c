@@ -41,6 +41,8 @@ Bubble-Sort
 Bubble Sorts given array.
 Best case: O(n*logn)
 Average case: O(n*logn)
+Best case: O(n)
+Average case: O(n*n)
 Worst case: O(n*n)
 Space complexity: O(1)
 Stability: Stable
