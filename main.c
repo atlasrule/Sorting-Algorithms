@@ -46,7 +46,7 @@ Space complexity: O(1)
 Stability: Stable
 =================
 */
-void bubleSort(int A[], int size) {
+void bubbleSort(int A[], int size) {
   for (int i=size-1; i>0; i--) {
     for (int j=0; j<i; j++){
       if ( A[j+1] < A[j] ) {
@@ -436,7 +436,7 @@ int main() {
   printf("\n\n\n Unsorted array:\n\n");
   printArray(arr, n);
 
-  // bubleSort(arr, n);
+  // bubbleSort(arr, n);
   // printf("\n\n\n\n Bubble-Sorted:\n\n");
   // printArray(arr, n);
 
